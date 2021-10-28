@@ -34,11 +34,6 @@ public class ImplemantarAgenda {
 
 		System.out.println(agenda2.cliente);
 		System.out.println(agenda2.modelo);
-				
-		
-		
-				
-		
 
 	}
 
