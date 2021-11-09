@@ -2,14 +2,15 @@ package br.com.aula6.implementacao;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import br.com.aul6.beans.Agendamento;
+import br.com.aul6.beans.Medico;
 import br.com.aul6.beans.Paciente;
 
 public class ExecutarAgendamento {
 
 	public static void main(String[] args) {
-		
-		
 		
 		Scanner s = new Scanner(System.in);
 		
@@ -24,9 +25,34 @@ public class ExecutarAgendamento {
 		System.out.println("Digite o fone");
 		String fone= s.nextLine();
 
-		Paciente paciente = new Paciente(nomePaciente,cpf,fone);
+		System.out.println("Digite o endereco");
+		String endereco= s.nextLine();
+
+		Paciente paciente = new Paciente(nomePaciente,cpf,fone, endereco);
 		
+		paciente.salvar();
+
+		System.out.println("Informações do Medico");
 		
+		System.out.println("Digite o Medico");
+		String nomeMedico = s.nextLine();
+		
+		System.out.println("Digite o cpf Medico");
+		String cpfMedico = s.nextLine();		
+		
+		System.out.println("Digite o fone Medico");
+		String foneMedico= s.nextLine();
+		
+		System.out.println("Digite o crm");
+		String crm= s.nextLine();
+		
+		System.out.println("Digite a especialidade");
+		String especialidade= s.nextLine();
+
+		Medico medico = new Medico(nomeMedico,cpfMedico,foneMedico,especialidade, crm);
+
+		medico.salvar();
+				
 		System.out.println("Iniciando Agendamento");
 
 		System.out.println("Data:");
@@ -34,9 +60,6 @@ public class ExecutarAgendamento {
 
 		System.out.println("Hora:");
 		String hora = s.nextLine();
-
-		System.out.println("Medico:");
-		String medico = s.nextLine();
 
 		System.out.println("atendente:");
 		String atendente = s.nextLine();

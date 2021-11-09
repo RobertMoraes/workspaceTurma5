@@ -5,14 +5,14 @@ public class Agendamento {
 	private Paciente paciente;
 	private String data;
 	private String hora;
-	private String medico;
+	private Medico medico;
 	private double valor;
 	private String atendente;
 	
 	// Construtor
 	public Agendamento() {}
 	
-	public Agendamento(Paciente paciente, String data, String hora, String medico, double valor, String atendente) {
+	public Agendamento(Paciente paciente, String data, String hora, Medico medico, double valor, String atendente) {
 		super();
 		this.paciente = paciente;
 		this.data = data;
@@ -42,10 +42,10 @@ public class Agendamento {
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
-	public String getMedico() {
+	public Medico getMedico() {
 		return medico;
 	}
-	public void setMedico(String medico) {
+	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
 	public double getValor() {
@@ -63,6 +63,7 @@ public class Agendamento {
 	
 	// Metodos
 	public void agendar() {
-		System.out.println("Paciente: " + paciente.getNome() + " fone: "+ paciente.getFone()  + " data:" + data + "-" + hora);
+		System.out.println("Paciente: " + paciente.getNome() + " fone: "+ paciente.getFone()  
+					+ " data:" + data + "-" + hora  + " Medico:" + medico.getEspecialidade() );
 	}
 }
